@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MenuMainActivity">
+
+    <!-- 마이페이지 제목 -->
+    <TextView
+        android:id="@+id/my_page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="마이페이지"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 선 (제목 아래) -->
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#DCDCDC"
+        app:layout_constraintTop_toBottomOf="@id/my_page_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp" />
+
+    <!-- 개인정보 출력 부분 -->
+    <TextView
+        android:id="@+id/user_info"
+        android:layout_width="375dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/edittext_border"
+        android:padding="16dp"
+        android:paddingEnd="32dp"
+        android:text="\n아이디: qwe123\n"
+        android:textSize="25sp"
+        android:gravity="end"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <!-- pp.png 이미지 추가 -->
+
+    <!-- 정보 출력 아래 선 -->
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="38dp"
+        android:src="@drawable/pp"
+        app:layout_constraintBottom_toBottomOf="@id/user_info"
+        app:layout_constraintLeft_toLeftOf="@id/user_info"
+        app:layout_constraintTop_toTopOf="@id/user_info"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <View
+        android:id="@+id/line_below_info"
+        android:layout_width="0dp"
+        android:layout_height="11dp"
+        android:background="#F0F0F0"
+        app:layout_constraintTop_toBottomOf="@id/user_info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!-- 경력 관리 버튼 -->
+    <Button
+        android:id="@+id/calendar_button"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:text="캘린더"
+        android:backgroundTint="#000080"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_info" />
+
+    <Button
+        android:id="@+id/career_management_button"
+        android:layout_width="377dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="경력 관리"
+        android:backgroundTint="#000080"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calendar_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

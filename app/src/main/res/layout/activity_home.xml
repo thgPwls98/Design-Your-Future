@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    tools:context=".HomeActivity">
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="371dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/search_edittext_border"
+        android:hint="검색어를 입력하세요."
+        android:inputType="text"
+        android:paddingStart="25dp"
+        android:paddingEnd="16dp"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toStartOf="@id/menu_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 첫 번째 일정 섹션 -->
+
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_width="55dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="61dp"
+        android:contentDescription="검색"
+        android:background="@drawable/round_button_background"
+        app:tint="#FFFFFF"
+        android:src="@android:drawable/ic_search_category_default"
+        app:layout_constraintStart_toStartOf="@id/search_edit_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/menu_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="21dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="메뉴"
+        android:src="@drawable/ic_hamburger_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/calendar_section"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/schedule_border"
+        app:layout_constraintTop_toBottomOf="@id/search_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <!-- 다음 일정 레이블 -->
+        <TextView
+            android:id="@+id/calendar_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="다음 일정"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- 결과 출력 섹션 -->
+        <LinearLayout
+            android:id="@+id/schedule_card"
+            android:layout_width="match_parent"
+            android:layout_height="249dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/edittext_border">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/schedule_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 결과 섹션 (레이블과 결과를 하나로 묶은 LinearLayout) -->
+    <LinearLayout
+        android:id="@+id/results_section"
+        android:layout_width="370dp"
+        android:layout_height="365dp"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        android:padding="16dp"
+        android:background="@drawable/schedule_border"
+        app:layout_constraintTop_toBottomOf="@id/calendar_section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 최신 대외활동 레이블 -->
+        <TextView
+            android:id="@+id/results_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="최신 대외활동"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 결과 출력 섹션 -->
+        <android.widget.ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/results_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_border">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/results_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            </LinearLayout>
+        </android.widget.ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

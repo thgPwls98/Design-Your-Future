@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "206523421168",
+    "project_id": "dyf24-39a7d",
+    "storage_bucket": "dyf24-39a7d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206523421168:android:a5553b476e6aebdf3a8d35",
+        "android_client_info": {
+          "package_name": "com.example.designyourfuture"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmVACH-EU51r1GRhr_VMbtqUvhRbQZ8lg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
